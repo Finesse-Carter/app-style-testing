@@ -1,14 +1,14 @@
 import React from "react";
+const Content = () =>{
 
-const Content = (props) =>{
-    console.log(props)
-    
+    // console.log(props)
+    const part = ['Fundamentals of React','Using props to pass data','State of a component']
+    const names =part.map(element => <p> {element}</p>);
+    console.log(names);
+
     return(
         <div className='content' >
-    {
-props.course.part.name.forEach(element => <p> {element}</p>)
-}
-
+ {names}
         </div>
     )
 }
