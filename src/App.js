@@ -1,10 +1,12 @@
 import React from 'react';
+import Content from './Content';
 import Header from './Header';
 
 
 const App = () =>{
-  const course = 'Half Stack application development'
-  const part = [
+  const course = {
+  name:'Half Stack application development',
+   part: [
      {
     name: 'Fundamentals of React',
     exercises: 10
@@ -16,11 +18,13 @@ const App = () =>{
   {
     name: 'State of a component',
     exercises: 14
-  },
+  }
   ]
+}
   return(
   <div className="App">
-<Header course={course}/>
+<Header course={course.name}/>
+ <Content course={course.part.name} />
      </div>
 )
 }

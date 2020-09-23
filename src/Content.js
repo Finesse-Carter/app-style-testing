@@ -2,9 +2,13 @@ import React from "react";
 
 const Content = (props) =>{
     console.log(props)
+    
     return(
         <div className='content' >
-<p>{props.parts}</p>
+    {
+props.course.part.name.forEach(element => <p> {element}</p>)
+}
+
         </div>
     )
 }
